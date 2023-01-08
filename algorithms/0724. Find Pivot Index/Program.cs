@@ -37,7 +37,7 @@ Note: This question is the same as 1991: https://leetcode.com/problems/find-th
 */
 // Slow first solution
 // Time complexity: O(n^2)
-// Space complexity: O(?)
+// Space complexity: O(1)
 public class Solution
 {
   public int PivotIndex(int[] nums)
@@ -60,7 +60,7 @@ public class Solution
 }
 // Faster
 // Time complexity: O(n)
-// Space complexity: O(?)
+// Space complexity: O(1)
 public class Solution
 {
   public int PivotIndex(int[] nums)

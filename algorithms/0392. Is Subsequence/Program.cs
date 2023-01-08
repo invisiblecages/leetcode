@@ -62,3 +62,22 @@ public class Solution
     return i == s.Length;
   }
 }
+// Time complexity: O(n)
+// Space complexity: O(1)
+public class Solution
+{
+  public bool IsSubsequence(string s, string t)
+  {
+    int cnt = 0;
+    for (int i = 0; i < t.Length; i++)
+    {
+      if (cnt == s.Length)
+        return true;
+
+      if (s[cnt] == t[i])
+        cnt++;
+    }
+
+    return cnt == s.Length;
+  }
+}

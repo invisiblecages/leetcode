@@ -45,8 +45,8 @@ Constraints:
     0 <= nums[i] <= 50
     0 <= val <= 100
 */
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n)
+// Space complexity: O(1)
 public class Solution
 {
   public int RemoveElement(int[] nums, int val)
