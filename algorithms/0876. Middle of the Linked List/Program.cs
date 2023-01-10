@@ -16,6 +16,17 @@ Constraints:
     The number of nodes in the list is in the range [1, 100].
     1 <= Node.val <= 100
 */
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode(int val=0, ListNode next=null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
 // Time complexity: O(n)
 // Space complexity: O(n)
 public class Solution
@@ -32,7 +43,6 @@ public class Solution
     return list[list.Count / 2];
   }
 }
-
 // Time complexity: O(n)
 // Space complexity: O(1)
 public ListNode MiddleNode(ListNode head)
