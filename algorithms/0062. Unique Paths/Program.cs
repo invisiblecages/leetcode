@@ -22,35 +22,35 @@ Explanation: From the top-left corner, there are a total of 3 ways to reach the 
 Constraints:
     1 <= m, n <= 100
 */
-// Faster by using memoization
+// Recursive dfs using memoization
 // Time complexity: O(m * n)
 // Space complexity: O(m * n)
 public class Solution
 {
   public int UniquePaths(int m, int n)
   {
-	// declare a 2D array to store the number of unique paths to each cell
+    // declare a 2D array to store the number of unique paths to each cell
     int[,] cache = new int[m, n];
-	// initialize the cache array with -1
+    // initialize the cache array with -1
     for (int x = 0; x < m; x++)
       for (int y = 0; y < n; y++)
         cache[x, y] = -1;
     
-	// call the helper method to calculate the unique paths
+    // call the helper method to calculate the unique paths
     return DFS(0, 0);
 
     int DFS(int x, int y)
     {
-	  // base case: if we reach the last row and last col we found one unique path
+      // base case: if we reach the last row and last col we found one unique path
       if (x == m - 1 && y == n - 1)
         return 1;
-	  // if we exceed the grid boundaries return 0
+      // if we exceed the grid boundaries return 0
       if (x >= m || y >= n)
         return 0;
       // check if we already calculated the result for the current cell
       if (cache[x, y] != -1)
         return cache[x, y];
-	  // calculate the result for the current cell
+      // calculate the result for the current cell
       cache[x, y] = DFS(x + 1, y) + DFS(x, y + 1);
       return cache[x, y];
     }

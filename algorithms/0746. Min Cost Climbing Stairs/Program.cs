@@ -29,7 +29,6 @@ Constraints:
     2 <= cost.length <= 1000
     0 <= cost[i] <= 999
 */
-// Top-down
 // Time complexity: O(n)
 // Space complexity: O(1)
 public class Solution
@@ -42,7 +41,6 @@ public class Solution
     return Math.Min(cost[cost.Length - 1], cost[cost.Length - 2]);
   }
 }
-// Bottom-up
 // Time complexity: O(n)
 // Space complexity: O(1)
 public class Solution
