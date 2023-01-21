@@ -41,17 +41,8 @@ public class Solution
     {
       int stone1 = pq.Dequeue();
       int stone2 = pq.Dequeue();
-
-      if (stone1 > stone2)
-      {
-        int smash = stone1 - stone2;
-        pq.Enqueue(smash, -smash);
-      }
-      else
-      { 
-        int smash = stone2 - stone1;
-        pq.Enqueue(smash, -smash);
-      }
+      int smash = stone1 - stone2;
+      pq.Enqueue(smash, -smash);
     }
 
     return pq.Peek();   
