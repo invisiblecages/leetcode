@@ -43,11 +43,6 @@ public class Solution
         left++;
         right--;
       }
-      else if (people[right] <= limit)
-      {
-        boats++;
-        right--;
-      }
       else 
       {
         boats++;
