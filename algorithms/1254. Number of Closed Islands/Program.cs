@@ -33,8 +33,8 @@ Constraints:
     1 <= grid.length, grid[0].length <= 100
     0 <= grid[i][j] <=1
 */
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n * m)
+// Space complexity: O(n * m)
 public class Solution 
 {
   public int ClosedIsland(int[][] grid) 
