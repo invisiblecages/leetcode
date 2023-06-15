@@ -38,8 +38,8 @@ Constraints:
     All the values of nums are unique.
     nums is sorted in ascending order.
 */
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n)
+// Space complexity: O(n)
 public class Solution 
 {
   private void AddRangeToList(int[] range, List<string> result)
