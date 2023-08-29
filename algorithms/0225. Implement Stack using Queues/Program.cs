@@ -12,9 +12,9 @@ Implement the MyStack class:
 Notes:
 
     You must use only standard operations of a queue, 
-	which means that only push to back, peek/pop from front, size and is empty operations are valid.
+    which means that only push to back, peek/pop from front, size and is empty operations are valid.
     Depending on your language, the queue may not be supported natively. 
-	You may simulate a queue using a list or deque (double-ended queue) as long as you use only a queue's standard operations.
+    You may simulate a queue using a list or deque (double-ended queue) as long as you use only a queue's standard operations.
 
 Example 1:
 
