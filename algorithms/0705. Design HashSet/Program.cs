@@ -28,11 +28,11 @@ myHashSet.contains(2); // return False, (already removed)
 
 Constraints:
 
-    0 <= key <= 106
-    At most 104 calls will be made to add, remove, and contains.
+    0 <= key <= 10^6
+    At most 10^4 calls will be made to add, remove, and contains.
 */
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(1)
+// Space complexity: O(10^4)
 public class MyHashSet 
 {
   private List<int>[] array;
