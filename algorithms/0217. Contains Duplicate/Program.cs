@@ -23,3 +23,22 @@ public class Solution
 {
   public bool ContainsDuplicate(int[] nums) => nums.Length > nums.Distinct().Count();
 }
+// Time complexity: O(n)
+// Space complexity: O(n)
+public class Solution
+{
+  public bool ContainsDuplicate(int[] nums) 
+  {
+    Dictionary<int, int> dict = new();
+
+    foreach (int num in nums)
+    {
+      if (dict.ContainsKey(num))
+        return true;
+      else
+        dict[num] = 1;
+    }
+
+    return false;
+  }
+}

@@ -57,7 +57,7 @@ public class Solution
   }
 }
 // Time complexity: O(n^2)
-// Space complexity: O(?)
+// Space complexity: O(1)
 public class Solution 
 {
   // Find the length a palindrome given its center
