@@ -38,3 +38,28 @@ public class Solution
     return cache[n];
   }
 }
+// Top-down approach
+// Time complexity: O(n)
+// Space complexity: O(n)
+public class Solution
+{
+  private int Climb(int n, Dictionary<int, int> cache)
+  {
+    if (n <= 1)
+    {
+      return 1;
+    }
+
+    if (!cache.ContainsKey(n))
+    {
+      cache[n] = Climb(n - 1, cache) + Climb(n - 2, cache);
+    }
+
+    return cache[n];
+  }
+
+  public int ClimbStairs(int n)
+  {
+    return Climb(n, []);
+  }
+}
