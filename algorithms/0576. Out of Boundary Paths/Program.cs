@@ -4,7 +4,7 @@ You are allowed to move the ball to one of the four adjacent cells in the grid (
 You can apply at most maxMove moves to the ball.
 
 Given the five integers m, n, maxMove, startRow, startColumn, return the number of paths to move the ball out of the grid boundary. 
-Since the answer can be very large, return it modulo 109 + 7.
+Since the answer can be very large, return it modulo 10^9 + 7.
 
 Example 1:
 
