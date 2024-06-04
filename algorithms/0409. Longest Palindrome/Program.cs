@@ -1,8 +1,8 @@
 ﻿/*
 Given a string s which consists of lowercase or uppercase letters, 
-return the length of the longest palindrome that can be built with those letters.
+return the length of the longest palindrome that can be built with those letters.
 
-Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
+Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
 
 Example 1:
 Input: s = "abccccdd"
@@ -16,8 +16,39 @@ Explanation: The longest palindrome that can be built is "a", whose length is 1.
 
 Constraints:
     1 <= s.length <= 2000
-    s consists of lowercase and/or uppercase English letters only.
+    s consists of lowercase and/or uppercase English letters only.
 */
+// Time complexity: O(n)
+// Space complexity: O(1)
+public class Solution
+{
+  public int LongestPalindrome(string s)
+  {
+    Dictionary<char, int> dict = [];
+    bool odd = false;
+	int res = 0;
+    
+    foreach (char c in s)
+    {
+      dict[c] = dict.ContainsKey(c) ? dict[c] + 1 : 1;
+    }
+
+    foreach (var kvp in dict)
+    {
+      if (kvp.Value % 2 == 0)
+      {
+        res += kvp.Value;
+      }
+      else
+      {
+        res += kvp.Value - 1;
+        odd = true;
+      }
+    }
+
+    return odd ? res + 1 : res;
+  }
+}
 // Time complexity: O(n)
 // Space complexity: O(n)
 public class Solution
