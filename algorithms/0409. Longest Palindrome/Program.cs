@@ -26,7 +26,7 @@ public class Solution
   {
     Dictionary<char, int> dict = [];
     bool odd = false;
-	int res = 0;
+    int res = 0;
     
     foreach (char c in s)
     {
