@@ -18,7 +18,7 @@ Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
 Constraints:
-    0 <= s.length <= 5 * 104
+    0 <= s.length <= 5 * 10^4
     s consists of English letters, digits, symbols and spaces.
 */
 // Slow first solution
@@ -51,9 +51,37 @@ public class Solution
       }      
     }
 
-    return res;     
+    return res;
   }
 }
-// Faster
 // Time complexity: O(n)
 // Space complexity: O(n)
+public class Solution
+{
+  public int LengthOfLongestSubstring(string s)
+  {
+    HashSet<char> chars = [];
+    int max = 0;
+    int left = 0;
+    int right = 0;
+
+    while (right < s.Length)
+    {
+      char c = s[right];
+
+      if (chars.Contains(c))
+      {
+        chars.Remove(s[left]);
+        left++;
+      }
+      else
+      {
+        chars.Add(c);
+        right++;
+        max = Math.Max(max, chars.Count);
+      }
+    }
+
+    return max;
+  }
+}
