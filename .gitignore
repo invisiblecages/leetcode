@@ -11,6 +11,7 @@
 *.sln.docstates
 incomplete/
 revisit/
+template/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
